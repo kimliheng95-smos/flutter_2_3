@@ -1,4 +1,4 @@
-package com.example.intro_flutter
+git push -u origin mainpackage com.example.intro_flutter
 
 import io.flutter.embedding.android.FlutterActivity
 
