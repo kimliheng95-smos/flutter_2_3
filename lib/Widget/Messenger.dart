@@ -24,7 +24,7 @@ class Chat extends StatelessWidget {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(34),
                             child: Container(
-                              width: 900,
+                              width: 100,
                               height: 50,
                               decoration: BoxDecoration(
                                 color: const Color.fromARGB(255, 206, 206, 199),

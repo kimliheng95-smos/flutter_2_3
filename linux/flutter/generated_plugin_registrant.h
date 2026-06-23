@@ -1,4 +1,4 @@
-git init//
+//
 //  Generated file. Do not edit.
 //
 
