@@ -102,23 +102,68 @@ class Learning extends StatelessWidget {
               ),
             ]
           ),
-          SizedBox(height: 20),
           Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: GridView(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  mainAxisExtent: 20,
-                  crossAxisSpacing: 20,
-                  childAspectRatio: 8/11,
-                ),
-                children: [
-                  cardGrid1(name: "H", name1: "ff", price: 12, image: "https://png.pngtree.com/png-clipart/20231017/original/pngtree-burger-food-png-free-download-png-image_13329458.png"),
-                ],
-              ),
-            ),
-          )
+  child: GridView(
+    padding: const EdgeInsets.all(10),
+    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+      crossAxisCount: 2,
+      crossAxisSpacing: 20,
+      mainAxisSpacing: 20,
+      childAspectRatio: 0.7,
+    ),
+    children: [
+      cardGrid1(
+        name: "Cheese Burger",
+        name1: "Hot Burger",
+        price: 12.0,
+        image:
+            "https://png.pngtree.com/png-clipart/20241108/original/pngtree-delicious-and-testy-cheese-burger-png-image_16763714.png",
+      ),
+      cardGrid1(
+        name: "Cheese Burger",
+        name1: "Hot Burger",
+        price: 12.0,
+        image:
+            "https://png.pngtree.com/png-clipart/20250510/original/pngtree-burger-png-image_19773597.png",
+      ),
+      cardGrid1(
+        name: "Cheese Burger",
+        name1: "Hot Burger",
+        price: 12.0,
+        image:
+            "https://png.pngtree.com/png-clipart/20241108/original/pngtree-delicious-and-testy-cheese-burger-png-image_16763714.png",
+      ),
+      cardGrid1(
+        name: "Cheese Burger",
+        name1: "Hot Burger",
+        price: 12.0,
+        image:
+            "https://png.pngtree.com/png-clipart/20241108/original/pngtree-delicious-and-testy-cheese-burger-png-image_16763714.png",
+      ),
+      // cardGrid1(
+      //   name: "Cheese Burger",
+      //   name1: "Delicious Burger",
+      //   price: 20.0,
+      //   image:
+      //       "https://png.pngtree.com/png-clipart/20240610/original/pngtree-fast-food-big-burger-png-image_15295528.png",
+      // ),
+      // cardGrid1(
+      //   name: "Cheese Burger",
+      //   name1: "Delicious Burger",
+      //   price: 22.0,
+      //   image:
+      //       "https://png.pngtree.com/png-clipart/20241206/original/pngtree-delicious-crispy-chicken-burger-png-image_17630792.png",
+      // ),
+      // cardGrid1(
+      //   name: "Cheese Burger",
+      //   name1: "Delicious Burger",
+      //   price: 50.0,
+      //   image:
+      //       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujcGAw1kiyw4Qzv16jHwxCEPVUJ15hHhZOw&s",
+      // ),
+    ],
+  ),
+),
         ],
       )
     );
@@ -126,50 +171,68 @@ class Learning extends StatelessWidget {
   }
 }
 Widget cardGrid1({
-   required String name,
-   required String name1,
-   required double price,
-   required String image,
+  required String name,
+  required String name1,
+  required double price,
+  required String image,
 }) {
   return Card(
-    // color: Colors.red,
-    child: Container(
-      // color:Colors.amber,
-      child: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Center(
+    elevation: 5,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(20),
+    ),
+    child: Padding(
+      padding: const EdgeInsets.all(10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(
+            child: Center(
               child: Image.network(
                 image,
+                fit: BoxFit.contain,
               ),
             ),
-            Text(
-              name,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+          ),
+
+          const SizedBox(height: 10),
+
+          Text(
+            name,
+            style: const TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
             ),
-            Text(
-              name1,
-              style: TextStyle(color: const Color.fromARGB(255, 96, 94, 94), fontSize: 20),
+          ),
+
+          Text(
+            name1,
+            style: const TextStyle(
+              color: Colors.grey,
             ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  price.toString()+"\$",
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          ),
+
+          const SizedBox(height: 10),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "\$${price.toStringAsFixed(2)}",
+                style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
                 ),
-                Icon(Icons.add_circle, color: const Color.fromARGB(255, 247, 166, 4)),
-              ],
-            ),
-          ],
-        ),
+              ),
+              const Icon(
+                Icons.add_circle,
+                color: Colors.orange,
+                size: 30,
+              ),
+            ],
+          ),
+        ],
       ),
     ),
   );
 }
-
