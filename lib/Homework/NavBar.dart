@@ -18,27 +18,66 @@ class _HomePage1State extends State<Navbar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Center(child: Text("Bottom Navigation Bar")),
-      ),
       body: screen[selectedIndex],
-      bottomNavigationBar: BottomNavigationBar(
-      selectedItemColor: Colors.amber,
-      unselectedItemColor: Colors.grey,
-      currentIndex: selectedIndex,
-        onTap: (value) {
-          setState(() {
-            selectedIndex=value;
-          });
-        },
-        type: BottomNavigationBarType.fixed,
-        items:[
-          BottomNavigationBarItem(icon: Icon(Icons.home,),label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.map_outlined,),label: "Places"),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite_outline,),label: "Favorites"),
-          BottomNavigationBarItem(icon: Icon(Icons.person_outline,),label: "Profile"),
-        ]
-        ),
+      bottomNavigationBar: Container(
+  padding: const EdgeInsets.symmetric(vertical: 10),
+  decoration: const BoxDecoration(
+    color: Colors.white,
+    boxShadow: [
+      BoxShadow(color: Colors.black12, blurRadius: 10),
+    ],
+  ),
+  child: Row(
+    mainAxisAlignment: MainAxisAlignment.spaceAround,
+    children: [
+      _buildItem(Icons.home, "Home", 0),
+      _buildItem(Icons.map_outlined, "Places", 1),
+      _buildItem(Icons.favorite_outline, "Favorites", 2),
+      _buildItem(Icons.person_outline, "Profile", 3),
+    ],
+  ),
+),
     );
   }
+
+  Widget _buildItem(IconData icon, String label, int index) {
+  bool isSelected = selectedIndex == index;
+
+  return GestureDetector(
+    onTap: () {
+      setState(() {
+        selectedIndex = index;
+      });
+    },
+    child: ClipRRect(
+      borderRadius: BorderRadiusGeometry.circular(20),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 250),
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 4),
+        decoration: BoxDecoration(
+          color: isSelected ? const Color.fromARGB(255, 255, 213, 4) : const Color.fromARGB(0, 0, 0, 0),
+          borderRadius: BorderRadius.circular(16),
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(
+              icon,
+              color: isSelected ? const Color.fromARGB(255, 128, 124, 124) : const Color.fromARGB(255, 0, 0, 0),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              label,
+              style: TextStyle(
+                fontSize: 12,
+                color: isSelected ? const Color.fromARGB(255, 128, 124, 124) : const Color.fromARGB(255, 0, 0, 0),
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ],
+        ),
+      ),
+    ),
+  );
+}
 }
