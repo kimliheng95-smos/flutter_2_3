@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intro_flutter/Homework/Home.dart';
 
 class Navbar extends StatefulWidget {
   Navbar({super.key});
@@ -10,7 +11,7 @@ class Navbar extends StatefulWidget {
 class _HomePage1State extends State<Navbar> {
   int selectedIndex=0;
   List<Widget> screen =[
-    Center(child: Text("Home"),),
+    Home(),
     Center(child: Text("Places"),),
     Center(child: Text("Faverite"),),
     Center(child: Text("Profile"),),
