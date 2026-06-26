@@ -8,7 +8,7 @@ class Layout3 extends StatelessWidget {
     return Scaffold(
       //appbar fontsize
       appBar: AppBar(
-        leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
+        leading: Icon(Icons.menu),
         title: Text("Profile", style: TextStyle(fontSize: 24)),
         centerTitle: true,
         actions: [
@@ -24,7 +24,6 @@ class Layout3 extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Divider(),
             Container(
               width: 400,
               height: 150,

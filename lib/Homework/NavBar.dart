@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:intro_flutter/Homework/Home.dart';
-import 'package:intro_flutter/Homework/layout_3.dart';
-import 'package:intro_flutter/Homework/layout_4.dart';
 
 class Navbar extends StatefulWidget {
   Navbar({super.key});
@@ -15,8 +13,8 @@ class _HomePage1State extends State<Navbar> {
   List<Widget> screen = [
     Home(),
     Center(child: Text("Places")),
-    Layout4(),
-    Layout3(),
+    Center(child: Text("Faverite")),
+    Center(child: Text("Profile")),
   ];
   @override
   Widget build(BuildContext context) {
