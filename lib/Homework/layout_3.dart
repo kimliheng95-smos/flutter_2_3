@@ -8,7 +8,7 @@ class Layout3 extends StatelessWidget {
     return Scaffold(
       //appbar fontsize
       appBar: AppBar(
-        leading: Icon(Icons.menu),
+        leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
         title: Text("Profile", style: TextStyle(fontSize: 24)),
         centerTitle: true,
         actions: [
@@ -94,10 +94,13 @@ class Layout3 extends StatelessWidget {
                       ),
                       child: Padding(
                         padding: const EdgeInsets.only(bottom: 8),
-                        child: Icon(
-                          Icons.add_circle,
-                          color: Colors.white,
-                          size: 19,
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.add_circle,
+                            color: Colors.white,
+                            size: 19,
+                          ),
                         ),
                       ),
                     ),
