@@ -7,80 +7,23 @@ class Layout3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       //appbar fontsize
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(60),
-        child: SafeArea(
-          child: Container(
-            decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 255, 247, 231),
-              border: Border(
-                top: BorderSide(
-                  width: 1,
-                  color: DefaultSelectionStyle.defaultColor,
-                ),
-                left: BorderSide(
-                  width: 1,
-                  color: DefaultSelectionStyle.defaultColor,
-                ),
-                right: BorderSide(
-                  width: 1,
-                  color: DefaultSelectionStyle.defaultColor,
-                ),
-                bottom: BorderSide(
-                  width: 1,
-                  color: DefaultSelectionStyle.defaultColor,
-                ),
-              ),
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(18),
-                topRight: Radius.circular(18),
-                bottomLeft: Radius.circular(18),
-                bottomRight: Radius.circular(18),
-              ),
-            ),
-            child: SafeArea(
-  child: Container(
-    height: 60,
-    decoration: BoxDecoration(
-      color: const Color.fromARGB(255, 255, 247, 231),
-      border: Border.all(color: Colors.black12),
-      borderRadius: BorderRadius.circular(18),
-    ),
-    child: Row(
-      children: [
-        const SizedBox(width: 10),
-        const Icon(Icons.menu),
-        const SizedBox(width: 10),
-        const Text(
-          "Visit Cambodia",
-          style: TextStyle(
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        const Spacer(),
-        Padding(
-          padding: const EdgeInsets.only(right: 10),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(20),
-            child: Image.asset(
-              "assets/liheng.jpg",
-              width: 40,
-              height: 40,
-              fit: BoxFit.cover,
+      appBar: AppBar(
+        leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
+        title: Text("Favorites", style: TextStyle(fontSize: 24)),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ClipRRect(
+              borderRadius: BorderRadiusGeometry.circular(20),
+              child: Image.asset("assets/liheng.jpg"),
             ),
           ),
-        ),
-      ],
-    ),
-  ),
-),
-          ),
-        ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
+            Divider(),
             Container(
               width: 400,
               height: 150,

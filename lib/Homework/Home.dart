@@ -15,58 +15,18 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade200,
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(60),
-        child: SafeArea(
-          child: Container(
-            decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 255, 247, 231),
-              border: Border(
-                top: BorderSide(
-                  width: 1,
-                  color: DefaultSelectionStyle.defaultColor,
-                ),
-                left: BorderSide(
-                  width: 1,
-                  color: DefaultSelectionStyle.defaultColor,
-                ),
-                right: BorderSide(
-                  width: 1,
-                  color: DefaultSelectionStyle.defaultColor,
-                ),
-              ),
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(18),
-                topRight: Radius.circular(18),
-              ),
-            ),
-            child: AppBar(
-              elevation: 0,
-              backgroundColor: Colors.transparent,
-              surfaceTintColor: Colors.transparent,
-              shadowColor: Colors.transparent,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
-              ),
-              leading: const Icon(Icons.menu, color: Colors.black),
-              title: const Text(
-                "Visit Cambodia",
-                style: TextStyle(color: Colors.black),
-              ),
-              centerTitle: true,
-              actions: [
-                Padding(
-                  padding: const EdgeInsets.all(8),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: Image.asset("assets/liheng.jpg"),
-                  ),
-                ),
-              ],
+      appBar: AppBar(
+        leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
+        title: Text("Visit Cambodia", style: TextStyle(fontSize: 24)),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ClipRRect(
+              borderRadius: BorderRadiusGeometry.circular(20),
+              child: Image.asset("assets/liheng.jpg"),
             ),
           ),
-        ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Stack(
@@ -193,9 +153,7 @@ class _HomeState extends State<Home> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 1),
-                  child: Image.network(
-                    "https://mysiemreaptours.com/wp-content/uploads/2022/10/Take-a-private-tour-of-the-sunrise-over-Angkor-Wat-the-most-well-known-temple-in-all-of-Angkor.-The-most-breathtaking-and-famous-sunrise-over-Angkor-Wat-will-occur-within-a-few-hours..jpg",
-                  ),
+                  child: Image.asset("assets/angkor.jpg"),
                 ),
                 Positioned(
                   bottom: 130,
