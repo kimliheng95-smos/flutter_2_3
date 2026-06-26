@@ -65,7 +65,7 @@ class _Layout4State extends State<Layout4> {
                   ),
                   cardGrid(
                     img:
-                        "https://cdn.britannica.com/49/94449-050-ECB0E7C2/Angkor-Wat-temple-complex-Cambodia.jpg",
+                        "https://cdn.adventure-life.com/81/11/8/5qg25p24/1300x820.webp",
                     name: "Angkor Wat",
                     location: "Siem Reap",
                     subtitle: "The Largest religious monument in the world,",
@@ -73,7 +73,7 @@ class _Layout4State extends State<Layout4> {
                   ),
                   cardGrid(
                     img:
-                        "https://cdn.britannica.com/49/94449-050-ECB0E7C2/Angkor-Wat-temple-complex-Cambodia.jpg",
+                        "https://izitour.com/media/blog/tempio-di-angkor-wat.webp",
                     name: "Angkor Wat",
                     location: "Siem Reap",
                     subtitle: "The Largest religious monument in the world,",

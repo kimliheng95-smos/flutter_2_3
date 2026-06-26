@@ -193,9 +193,7 @@ class _HomeState extends State<Home> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 1),
-                  child: Image.network(
-                    "https://mysiemreaptours.com/wp-content/uploads/2022/10/Take-a-private-tour-of-the-sunrise-over-Angkor-Wat-the-most-well-known-temple-in-all-of-Angkor.-The-most-breathtaking-and-famous-sunrise-over-Angkor-Wat-will-occur-within-a-few-hours..jpg",
-                  ),
+                  child: Image.asset("assets/angkor.jpg"),
                 ),
                 Positioned(
                   bottom: 130,
