@@ -13,14 +13,16 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         title: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
             padding: const EdgeInsets.only(left: 10),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Icon(Icons.computer_outlined),
-                Text("Home Screen")
+                Icon(Icons.computer_outlined,size: 20,),
+                SizedBox(width: 10,),
+                Text("Home Screen",style: TextStyle(fontSize: 15),)
               ],
             ),
           )
