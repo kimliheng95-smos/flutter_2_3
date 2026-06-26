@@ -24,6 +24,11 @@ class _HomePage1State extends State<Navbar> {
   padding: const EdgeInsets.symmetric(vertical: 10),
   decoration: const BoxDecoration(
     color: Colors.white,
+    border: Border(
+      top: BorderSide(width: 1,
+      color: Colors.grey
+      )
+    ),
     boxShadow: [
       BoxShadow(color: Colors.black12, blurRadius: 10),
     ],
