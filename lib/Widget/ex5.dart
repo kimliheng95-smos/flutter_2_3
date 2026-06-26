@@ -140,6 +140,95 @@ class Learning extends StatelessWidget {
         image:
             "https://png.pngtree.com/png-clipart/20241108/original/pngtree-delicious-and-testy-cheese-burger-png-image_16763714.png",
       ),
+      cardGrid1(
+        name: "Cheese Burger",
+        name1: "Hot Burger",
+        price: 12.0,
+        image:
+            "https://png.pngtree.com/png-clipart/20241108/original/pngtree-delicious-and-testy-cheese-burger-png-image_16763714.png",
+      ),
+      cardGrid1(
+        name: "Cheese Burger",
+        name1: "Hot Burger",
+        price: 12.0,
+        image:
+            "https://png.pngtree.com/png-clipart/20241108/original/pngtree-delicious-and-testy-cheese-burger-png-image_16763714.png",
+      ),
+      cardGrid1(
+        name: "Cheese Burger",
+        name1: "Hot Burger",
+        price: 12.0,
+        image:
+            "https://png.pngtree.com/png-clipart/20241108/original/pngtree-delicious-and-testy-cheese-burger-png-image_16763714.png",
+      ),
+      cardGrid1(
+        name: "Cheese Burger",
+        name1: "Hot Burger",
+        price: 12.0,
+        image:
+            "https://png.pngtree.com/png-clipart/20241108/original/pngtree-delicious-and-testy-cheese-burger-png-image_16763714.png",
+      ),
+      Column(
+        children: [
+          cardGrid1(
+        name: "Cheese Burger",
+        name1: "Hot Burger",
+        price: 12.0,
+        image:
+            "https://png.pngtree.com/png-clipart/20241108/original/pngtree-delicious-and-testy-cheese-burger-png-image_16763714.png",
+      ),
+      cardGrid1(
+        name: "Cheese Burger",
+        name1: "Hot Burger",
+        price: 12.0,
+        image:
+            "https://png.pngtree.com/png-clipart/20250510/original/pngtree-burger-png-image_19773597.png",
+      ),
+      cardGrid1(
+        name: "Cheese Burger",
+        name1: "Hot Burger",
+        price: 12.0,
+        image:
+            "https://png.pngtree.com/png-clipart/20241108/original/pngtree-delicious-and-testy-cheese-burger-png-image_16763714.png",
+      ),
+      cardGrid1(
+        name: "Cheese Burger",
+        name1: "Hot Burger",
+        price: 12.0,
+        image:
+            "https://png.pngtree.com/png-clipart/20241108/original/pngtree-delicious-and-testy-cheese-burger-png-image_16763714.png",
+      ),
+      cardGrid1(
+        name: "Cheese Burger",
+        name1: "Hot Burger",
+        price: 12.0,
+        image:
+            "https://png.pngtree.com/png-clipart/20241108/original/pngtree-delicious-and-testy-cheese-burger-png-image_16763714.png",
+      ),
+      cardGrid1(
+        name: "Cheese Burger",
+        name1: "Hot Burger",
+        price: 12.0,
+        image:
+            "https://png.pngtree.com/png-clipart/20241108/original/pngtree-delicious-and-testy-cheese-burger-png-image_16763714.png",
+      ),
+      cardGrid1(
+        name: "Cheese Burger",
+        name1: "Hot Burger",
+        price: 12.0,
+        image:
+            "https://png.pngtree.com/png-clipart/20241108/original/pngtree-delicious-and-testy-cheese-burger-png-image_16763714.png",
+      ),
+      cardGrid1(
+        name: "Cheese Burger",
+        name1: "Hot Burger",
+        price: 12.0,
+        image:
+            "https://png.pngtree.com/png-clipart/20241108/original/pngtree-delicious-and-testy-cheese-burger-png-image_16763714.png",
+      ),
+        ],
+      )
+
       // cardGrid1(
       //   name: "Cheese Burger",
       //   name1: "Delicious Burger",

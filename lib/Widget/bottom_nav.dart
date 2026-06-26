@@ -11,10 +11,9 @@ class BottomNav extends StatefulWidget {
 class _BottomNavState extends State<BottomNav> {
   int selectedIndex=0;
   List<Widget> screen =[
-    Center(child: Text("Home"),),
+    Learning(),
     Center(child: Text("Profile"),),
     Center(child: Text("Notification"),),
-    Learning(),
   ];
   @override
   Widget build(BuildContext context) {
