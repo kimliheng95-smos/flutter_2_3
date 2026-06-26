@@ -54,25 +54,25 @@ class Place extends StatelessWidget {
                     img:
                         "https://cdn.britannica.com/49/94449-050-ECB0E7C2/Angkor-Wat-temple-complex-Cambodia.jpg",
                     name: "Angkor Wat",
-                    location: "Siem Reap",
                     subtitle: "The Largest religious monument in the world,",
                     subtitle1: "this UNESCO World Heritage site is a...",
+                    Text_star: "4.9",
                   ),
                   cardGrid(
                     img:
                         "https://cdn.adventure-life.com/81/11/8/5qg25p24/1300x820.webp",
                     name: "Angkor Wat",
-                    location: "Siem Reap",
                     subtitle: "The Largest religious monument in the world,",
                     subtitle1: "this UNESCO World Heritage site is a...",
+                    Text_star: "5.3",
                   ),
                   cardGrid(
                     img:
                         "https://izitour.com/media/blog/tempio-di-angkor-wat.webp",
                     name: "Angkor Wat",
-                    location: "Siem Reap",
                     subtitle: "The Largest religious monument in the world,",
                     subtitle1: "this UNESCO World Heritage site is a...",
+                    Text_star: "6.0",
                   ),
                 ],
               ),
@@ -87,14 +87,17 @@ class Place extends StatelessWidget {
 Widget cardGrid({
   required String img,
   required String name,
-  required String location,
   required String subtitle,
   required String subtitle1,
+  required String Text_star,
 }) {
   return Card(
     child: Stack(
       children: [
-        Container(width: double.infinity, height: double.infinity),
+        SizedBox(
+          width: double.infinity,
+          height: 380, // ឬ 420
+        ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -118,19 +121,36 @@ Widget cardGrid({
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 4),
-                    child: Text(
-                      name,
-                      style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                      ),
+                    child: Row(
+                      children: [
+                        Text(
+                          name,
+                          style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 160),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: Container(
+                              width: 60,
+                              height: 25,
+                              decoration: BoxDecoration(
+                                color: const Color.fromARGB(255, 215, 212, 212),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  "TEMPLE",
+                                  style: TextStyle(fontSize: 12),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                  ),
-                  Row(
-                    children: [
-                      Icon(Icons.location_on_outlined),
-                      Text(location),
-                    ],
                   ),
                 ],
               ),
@@ -145,46 +165,24 @@ Widget cardGrid({
           ],
         ),
         Positioned(
-          top: 145,
-          left: 20,
-          child: ClipRRect(
-            borderRadius: BorderRadiusGeometry.circular(10),
-            child: Container(
-              width: 60,
-              height: 22,
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 246, 215, 101),
-              ),
-              child: Center(
-                child: Text(
-                  "Temple",
-                  style: TextStyle(fontSize: 11, color: Colors.black),
-                ),
-              ),
-            ),
-          ),
-        ),
-        Positioned(
           top: 20,
-          left: 323,
+          left: 310,
           child: ClipRRect(
             borderRadius: BorderRadiusGeometry.circular(20),
             child: Container(
-              width: 38,
-              height: 46,
+              width: 60,
+              height: 30,
               decoration: BoxDecoration(
                 color: const Color.fromARGB(255, 255, 255, 255),
               ),
               child: Padding(
-                padding: const EdgeInsets.only(bottom: 6),
-                child: IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.favorite, color: Colors.red, size: 22),
-                ),
+                padding: const EdgeInsets.only(right: 25),
+                child: Icon(Icons.star_outline, size: 18),
               ),
             ),
           ),
         ),
+        Positioned(top: 25, left: 340, child: Text(Text_star))
       ],
     ),
   );

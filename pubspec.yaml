@@ -61,6 +61,10 @@ flutter:
   assets:
     - assets/liheng.jpg
     - assets/angkor.jpg
+    - assets/angkor1.webp
+    - assets/siem-reap-cambodia-angkor-wat.jpg
+    - assets/angkor-wat-resized-1-scaled.webp
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

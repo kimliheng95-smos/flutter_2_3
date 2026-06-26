@@ -56,24 +56,21 @@ class _Layout4State extends State<Layout4> {
                 ),
                 children: [
                   cardGrid(
-                    img:
-                        "https://cdn.britannica.com/49/94449-050-ECB0E7C2/Angkor-Wat-temple-complex-Cambodia.jpg",
+                    img: "assets/angkor1.webp",
                     name: "Angkor Wat",
                     location: "Siem Reap",
                     subtitle: "The Largest religious monument in the world,",
                     subtitle1: "this UNESCO World Heritage site is a...",
                   ),
                   cardGrid(
-                    img:
-                        "https://cdn.adventure-life.com/81/11/8/5qg25p24/1300x820.webp",
+                    img: "assets/siem-reap-cambodia-angkor-wat.jpg",
                     name: "Angkor Wat",
                     location: "Siem Reap",
                     subtitle: "The Largest religious monument in the world,",
                     subtitle1: "this UNESCO World Heritage site is a...",
                   ),
                   cardGrid(
-                    img:
-                        "https://izitour.com/media/blog/tempio-di-angkor-wat.webp",
+                    img: "assets/angkor-wat-resized-1-scaled.webp",
                     name: "Angkor Wat",
                     location: "Siem Reap",
                     subtitle: "The Largest religious monument in the world,",
@@ -108,7 +105,7 @@ Widget cardGrid({
                 topLeft: Radius.circular(14),
                 topRight: Radius.circular(14),
               ),
-              child: Image.network(
+              child: Image.asset(
                 img,
                 width: double.infinity,
                 height: 180,
