@@ -6,9 +6,7 @@ class Stack2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Stage Widget"),
-      ),
+      appBar: AppBar(title: Text("Stage Widget")),
       body: Container(
         width: 350,
         height: 350,
@@ -17,11 +15,7 @@ class Stack2 extends StatelessWidget {
           padding: const EdgeInsets.only(left: 12),
           child: Stack(
             children: [
-              Container(
-                width: 300,
-                height: 300,
-                color: Colors.black,
-              ),
+              Container(width: 300, height: 300, color: Colors.black),
               Container(
                 width: 150,
                 height: 150,
@@ -34,13 +28,6 @@ class Stack2 extends StatelessWidget {
                   width: 100,
                   height: 100,
                   color: const Color.fromARGB(255, 255, 0, 0),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(70),
-                child: Container(
-                  child:
-                  Text("Boromey",style: TextStyle(fontSize: 50,color: const Color.fromARGB(255, 3, 49, 255)),),
                 ),
               ),
             ],
