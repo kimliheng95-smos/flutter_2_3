@@ -1,8 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:intro_flutter/Homework/NavBar.dart';
+import 'package:intro_flutter/Homework/layout_3.dart';
 import 'package:intro_flutter/Widget/Ex6.dart';
 import 'package:intro_flutter/Widget/Ex8.dart';
+import 'package:intro_flutter/Widget/Stack_widget.dart';
 import 'package:intro_flutter/Widget/Text_field_widget.dart';
 import 'package:intro_flutter/Widget/bottom_nav.dart';
 import 'package:intro_flutter/Widget/change_fav.dart';
@@ -15,16 +16,14 @@ import 'package:intro_flutter/Widget/state_full.dart';
 import 'package:intro_flutter/Widget/state_less.dart';
 import 'package:intro_flutter/Widget/tab_bar.dart';
 
-void main(){  
+void main() {
   runApp(MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
-  Widget build(BuildContext context){
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Navbar(),
-    );
+  Widget build(BuildContext context) {
+    return MaterialApp(debugShowCheckedModeBanner: false, home: Navbar());
   }
 }
