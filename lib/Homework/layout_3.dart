@@ -9,7 +9,8 @@ class Layout3 extends StatelessWidget {
       //appbar fontsize
       appBar: AppBar(
         leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
-        title: Text("Favorites", style: TextStyle(fontSize: 24)),
+        title: Text("Profile", style: TextStyle(fontSize: 24)),
+        centerTitle: true,
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
