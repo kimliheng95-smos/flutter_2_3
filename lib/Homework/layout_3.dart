@@ -7,24 +7,67 @@ class Layout3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       //appbar fontsize
-      appBar: AppBar(
-        leading: Icon(Icons.menu),
-        title: Text("Profile", style: TextStyle(fontSize: 24)),
-        centerTitle: true,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ClipRRect(
-              borderRadius: BorderRadiusGeometry.circular(20),
-              child: Image.asset("assets/liheng.jpg"),
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(60),
+        child: SafeArea(
+          child: Container(
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 255, 247, 231),
+              border: Border(
+                top: BorderSide(
+                  width: 1,
+                  color: DefaultSelectionStyle.defaultColor,
+                ),
+                left: BorderSide(
+                  width: 1,
+                  color: DefaultSelectionStyle.defaultColor,
+                ),
+                right: BorderSide(
+                  width: 1,
+                  color: DefaultSelectionStyle.defaultColor,
+                ),
+                bottom: BorderSide(
+                  width: 1,
+                  color: DefaultSelectionStyle.defaultColor,
+                ),
+              ),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(18),
+                topRight: Radius.circular(18),
+                bottomLeft: Radius.circular(18),
+                bottomRight: Radius.circular(18),
+              ),
+            ),
+            child: AppBar(
+              elevation: 0,
+              backgroundColor: Colors.transparent,
+              surfaceTintColor: Colors.transparent,
+              shadowColor: Colors.transparent,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              leading: const Icon(Icons.menu, color: Colors.black),
+              title: const Text(
+                "Visit Cambodia",
+                style: TextStyle(color: Colors.black),
+              ),
+              centerTitle: true,
+              actions: [
+                Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.asset("assets/liheng.jpg"),
+                  ),
+                ),
+              ],
             ),
           ),
-        ],
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Divider(),
             Container(
               width: 400,
               height: 150,
