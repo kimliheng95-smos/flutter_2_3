@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:intro_flutter/Homework/HomePage.dart';
+import 'package:intro_flutter/Homework/NavBar.dart';
 import 'package:intro_flutter/Widget/Ex6.dart';
 import 'package:intro_flutter/Widget/Ex8.dart';
 import 'package:intro_flutter/Widget/Text_field_widget.dart';
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context){
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Favarite(),
+      home: Navbar(),
     );
   }
 }
