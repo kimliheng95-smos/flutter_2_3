@@ -38,30 +38,43 @@ class Layout3 extends StatelessWidget {
                 bottomRight: Radius.circular(18),
               ),
             ),
-            child: AppBar(
-              elevation: 0,
-              backgroundColor: Colors.transparent,
-              surfaceTintColor: Colors.transparent,
-              shadowColor: Colors.transparent,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
-              ),
-              leading: const Icon(Icons.menu, color: Colors.black),
-              title: const Text(
-                "Visit Cambodia",
-                style: TextStyle(color: Colors.black),
-              ),
-              centerTitle: true,
-              actions: [
-                Padding(
-                  padding: const EdgeInsets.all(8),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: Image.asset("assets/liheng.jpg"),
-                  ),
-                ),
-              ],
+            child: SafeArea(
+  child: Container(
+    height: 60,
+    decoration: BoxDecoration(
+      color: const Color.fromARGB(255, 255, 247, 231),
+      border: Border.all(color: Colors.black12),
+      borderRadius: BorderRadius.circular(18),
+    ),
+    child: Row(
+      children: [
+        const SizedBox(width: 10),
+        const Icon(Icons.menu),
+        const SizedBox(width: 10),
+        const Text(
+          "Visit Cambodia",
+          style: TextStyle(
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const Spacer(),
+        Padding(
+          padding: const EdgeInsets.only(right: 10),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: Image.asset(
+              "assets/liheng.jpg",
+              width: 40,
+              height: 40,
+              fit: BoxFit.cover,
             ),
+          ),
+        ),
+      ],
+    ),
+  ),
+),
           ),
         ),
       ),
