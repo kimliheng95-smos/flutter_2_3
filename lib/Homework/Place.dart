@@ -28,11 +28,14 @@ class Place extends StatelessWidget {
               children: [
                 TextField(
                   decoration: InputDecoration(
+                    filled: true,
+                    fillColor: const Color.fromARGB(255, 239, 235, 235),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
                     prefixIcon: Icon(Icons.search),
                     hint: Text("Fin your next destination..."),
+                    suffixIcon: Icon(Icons.menu_open_outlined),
                   ),
                 ),
               ],
@@ -47,28 +50,29 @@ class Place extends StatelessWidget {
                   crossAxisCount: 1,
                   mainAxisSpacing: 20,
                   crossAxisSpacing: 20,
-                  childAspectRatio: 8 / 6.5,
+                  childAspectRatio: 8 / 7.6,
                 ),
                 children: [
                   cardGrid(
                     img:
-                        "https://cdn.britannica.com/49/94449-050-ECB0E7C2/Angkor-Wat-temple-complex-Cambodia.jpg",
+                        "https://apsaraauthority.gov.kh/wp-content/uploads/2021/06/DJI_0070L.jpg",
                     name: "Angkor Wat",
-                    subtitle: "The Largest religious monument in the world,",
-                    subtitle1: "this UNESCO World Heritage site is a...",
+                    subtitle:
+                        "The crowing jewell of the khmer Empire and the largest religious monument The Largest religious monument in the world,",
+                    subtitle1: "",
                     Text_star: "4.9",
                   ),
                   cardGrid(
                     img:
-                        "https://cdn.adventure-life.com/81/11/8/5qg25p24/1300x820.webp",
-                    name: "Angkor Wat",
+                        "https://asiaforvisitors.com/cambodia/angkor/angkor-wat/angkor-thom/IMG_1798_v1.JPG",
+                    name: "Bayon Tem",
                     subtitle: "The Largest religious monument in the world,",
                     subtitle1: "this UNESCO World Heritage site is a...",
                     Text_star: "5.3",
                   ),
                   cardGrid(
                     img:
-                        "https://izitour.com/media/blog/tempio-di-angkor-wat.webp",
+                        "https://www.ministryofvillas.com/wp-content/uploads/2023/08/destination-siem-reap.jpg",
                     name: "Angkor Wat",
                     subtitle: "The Largest religious monument in the world,",
                     subtitle1: "this UNESCO World Heritage site is a...",
@@ -92,6 +96,7 @@ Widget cardGrid({
   required String Text_star,
 }) {
   return Card(
+    color: const Color.fromARGB(255, 239, 237, 231),
     child: Stack(
       children: [
         SizedBox(
@@ -182,7 +187,23 @@ Widget cardGrid({
             ),
           ),
         ),
-        Positioned(top: 25, left: 340, child: Text(Text_star))
+        Positioned(top: 25, left: 340, child: Text(Text_star)),
+        Positioned(
+          top: 310,
+          left: 20,
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              backgroundColor: const Color.fromARGB(255, 1, 61, 10),
+              foregroundColor: const Color.fromARGB(255, 255, 255, 255),
+              fixedSize: Size(350, 40),
+            ),
+            onPressed: () {},
+            child: Text("View Details", style: TextStyle(fontSize: 16)),
+          ),
+        ),
       ],
     ),
   );

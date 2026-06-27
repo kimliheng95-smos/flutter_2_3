@@ -33,6 +33,8 @@ class _Layout4State extends State<Layout4> {
               children: [
                 TextField(
                   decoration: InputDecoration(
+                    filled: true,
+                    fillColor: const Color.fromARGB(255, 239, 235, 235),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
@@ -94,6 +96,7 @@ Widget cardGrid({
   required String subtitle1,
 }) {
   return Card(
+    color: const Color.fromARGB(255, 239, 237, 231),
     child: Stack(
       children: [
         Container(width: double.infinity, height: double.infinity),
