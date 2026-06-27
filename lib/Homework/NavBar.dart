@@ -13,12 +13,7 @@ class Navbar extends StatefulWidget {
 
 class _HomePage1State extends State<Navbar> {
   int selectedIndex = 0;
-  List<Widget> screen = [
-    Home(),
-    Place(),
-    Layout4(),
-    Layout3(),
-  ];
+  List<Widget> screen = [Home(), Place(), Layout4(), Layout3()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
