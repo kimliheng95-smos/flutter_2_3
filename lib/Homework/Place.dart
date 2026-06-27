@@ -65,7 +65,7 @@ class Place extends StatelessWidget {
                   cardGrid(
                     img:
                         "https://asiaforvisitors.com/cambodia/angkor/angkor-wat/angkor-thom/IMG_1798_v1.JPG",
-                    name: "Bayon Tem",
+                    name: "Bayon Temple",
                     subtitle: "The Largest religious monument in the world,",
                     subtitle1: "this UNESCO World Heritage site is a...",
                     Text_star: "5.3",
@@ -73,7 +73,7 @@ class Place extends StatelessWidget {
                   cardGrid(
                     img:
                         "https://www.ministryofvillas.com/wp-content/uploads/2023/08/destination-siem-reap.jpg",
-                    name: "Angkor Wat",
+                    name: "Pub Street Bridge",
                     subtitle: "The Largest religious monument in the world,",
                     subtitle1: "this UNESCO World Heritage site is a...",
                     Text_star: "6.0",
@@ -127,32 +127,27 @@ Widget cardGrid({
                   Padding(
                     padding: const EdgeInsets.only(left: 4),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          name,
-                          style: TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold,
+                        Expanded(
+                          child: Text(
+                            name,
+                            style: TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            overflow: TextOverflow.ellipsis,
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 160),
-                          child: ClipRRect(
+                        Container(
+                          width: 60,
+                          height: 25,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 215, 212, 212),
                             borderRadius: BorderRadius.circular(20),
-                            child: Container(
-                              width: 60,
-                              height: 25,
-                              decoration: BoxDecoration(
-                                color: const Color.fromARGB(255, 215, 212, 212),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  "TEMPLE",
-                                  style: TextStyle(fontSize: 12),
-                                ),
-                              ),
-                            ),
                           ),
+                          child: Text("TEMPLE",style: TextStyle(fontSize: 11),),
                         ),
                       ],
                     ),
