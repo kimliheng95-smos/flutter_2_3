@@ -28,11 +28,14 @@ class Place extends StatelessWidget {
               children: [
                 TextField(
                   decoration: InputDecoration(
+                    filled: true,
+                    fillColor: const Color.fromARGB(255, 239, 235, 235),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
                     prefixIcon: Icon(Icons.search),
                     hint: Text("Fin your next destination..."),
+                    suffixIcon: Icon(Icons.menu_open_outlined),
                   ),
                 ),
               ],
@@ -47,26 +50,30 @@ class Place extends StatelessWidget {
                   crossAxisCount: 1,
                   mainAxisSpacing: 20,
                   crossAxisSpacing: 20,
-                  childAspectRatio: 8 / 6.5,
+                  childAspectRatio: 8 / 7.6,
                 ),
                 children: [
                   cardGrid(
-                    img: "assets/angkor1.webp",
+                    img:
+                        "https://apsaraauthority.gov.kh/wp-content/uploads/2021/06/DJI_0070L.jpg",
                     name: "Angkor Wat",
-                    subtitle: "The Largest religious monument in the world,",
-                    subtitle1: "this UNESCO World Heritage site is a...",
+                    subtitle:
+                        "The crowing jewell of the khmer Empire and the largest religious monument The Largest religious monument in the world,",
+                    subtitle1: "",
                     Text_star: "4.9",
                   ),
                   cardGrid(
-                    img: "assets/siem-reap-cambodia-angkor-wat.jpg",
-                    name: "Angkor Wat",
+                    img:
+                        "https://asiaforvisitors.com/cambodia/angkor/angkor-wat/angkor-thom/IMG_1798_v1.JPG",
+                    name: "Bayon Temple",
                     subtitle: "The Largest religious monument in the world,",
                     subtitle1: "this UNESCO World Heritage site is a...",
                     Text_star: "5.3",
                   ),
                   cardGrid(
-                    img: "assets/angkor-wat-resized-1-scaled.webp",
-                    name: "Angkor Wat",
+                    img:
+                        "https://www.ministryofvillas.com/wp-content/uploads/2023/08/destination-siem-reap.jpg",
+                    name: "Pub Street Bridge",
                     subtitle: "The Largest religious monument in the world,",
                     subtitle1: "this UNESCO World Heritage site is a...",
                     Text_star: "6.0",
@@ -89,6 +96,7 @@ Widget cardGrid({
   required String Text_star,
 }) {
   return Card(
+    color: const Color.fromARGB(255, 239, 237, 231),
     child: Stack(
       children: [
         SizedBox(
@@ -103,7 +111,7 @@ Widget cardGrid({
                 topLeft: Radius.circular(14),
                 topRight: Radius.circular(14),
               ),
-              child: Image.asset(
+              child: Image.network(
                 img,
                 width: double.infinity,
                 height: 180,
@@ -119,32 +127,27 @@ Widget cardGrid({
                   Padding(
                     padding: const EdgeInsets.only(left: 4),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          name,
-                          style: TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold,
+                        Expanded(
+                          child: Text(
+                            name,
+                            style: TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            overflow: TextOverflow.ellipsis,
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 160),
-                          child: ClipRRect(
+                        Container(
+                          width: 60,
+                          height: 25,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 215, 212, 212),
                             borderRadius: BorderRadius.circular(20),
-                            child: Container(
-                              width: 60,
-                              height: 25,
-                              decoration: BoxDecoration(
-                                color: const Color.fromARGB(255, 215, 212, 212),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  "TEMPLE",
-                                  style: TextStyle(fontSize: 12),
-                                ),
-                              ),
-                            ),
                           ),
+                          child: Text("TEMPLE",style: TextStyle(fontSize: 11),),
                         ),
                       ],
                     ),
@@ -180,6 +183,22 @@ Widget cardGrid({
           ),
         ),
         Positioned(top: 25, left: 340, child: Text(Text_star)),
+        Positioned(
+          top: 310,
+          left: 20,
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              backgroundColor: const Color.fromARGB(255, 1, 61, 10),
+              foregroundColor: const Color.fromARGB(255, 255, 255, 255),
+              fixedSize: Size(350, 40),
+            ),
+            onPressed: () {},
+            child: Text("View Details", style: TextStyle(fontSize: 16)),
+          ),
+        ),
       ],
     ),
   );
