@@ -12,6 +12,8 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   bool isFav = true;
+  bool isFav1 = true;
+  bool isFav2 = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -185,9 +187,9 @@ class _HomeState extends State<Home> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(10),
                     child: Container(
-                      width: 150,
+                      width: 180,
                       height: 50,
-                      color: const Color.fromARGB(255, 43, 255, 0),
+                      color: const Color.fromARGB(255, 110, 181, 95),
                     ),
                   ),
                 ),
@@ -196,8 +198,11 @@ class _HomeState extends State<Home> {
                   left: 40,
                   child: Row(
                     children: [
-                      Text("Explore Now", style: TextStyle(fontSize: 15)),
-                      Icon(Icons.arrow_circle_right_sharp),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 16),
+                        child: Text("Explore Now", style: TextStyle(fontSize: 15)),
+                      ),
+                      Icon(Icons.arrow_forward),
                     ],
                   ),
                 ),
@@ -294,11 +299,121 @@ class _HomeState extends State<Home> {
                                 ),
                         ),
                       ),
+                      
                     ],
                   ),
                 ],
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.only(top: 865, left: 20),
+              child: Row(
+                children: [
+                  Stack(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: Image.network(
+                          "https://media.odynovotours.com/article/21000/angkor-thom_18661.jpg",
+                          width: 380,
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 175,
+                        left: 330,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(40),
+                          child: Container(
+                            width: 40,
+                            height: 40,
+                            color: const Color.fromARGB(255, 148, 143, 143),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 170,
+                        left: 325,
+                        child: IconButton(
+                          onPressed: () {
+                            setState(() {
+                              isFav1 = !isFav1;
+                              log("$isFav1");
+                            });
+                          },
+                          icon: (isFav1 == true)
+                              ? Icon(
+                                  Icons.favorite_outline,
+                                  size: 30,
+                                  color: Colors.white,
+                                )
+                              : Icon(
+                                  Icons.favorite,
+                                  size: 30,
+                                  color: Colors.white,
+                                ),
+                        ),
+                      ),
+                      
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 1117, left: 20),
+              child: Row(
+                children: [
+                  Stack(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: Image.network(
+                          "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Angkor_Wat.jpg/1280px-Angkor_Wat.jpg",
+                          width: 380,
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 210,
+                        left: 330,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(40),
+                          child: Container(
+                            width: 40,
+                            height: 40,
+                            color: const Color.fromARGB(255, 148, 143, 143),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 205,
+                        left: 325,
+                        child: IconButton(
+                          onPressed: () {
+                            setState(() {
+                              isFav2 = !isFav2;
+                              log("$isFav2");
+                            });
+                          },
+                          icon: (isFav2 == true)
+                              ? Icon(
+                                  Icons.favorite_outline,
+                                  size: 30,
+                                  color: Colors.white,
+                                )
+                              : Icon(
+                                  Icons.favorite,
+                                  size: 30,
+                                  color: Colors.white,
+                                ),
+                        ),
+                      ),
+                      
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            
           ],
         ),
       ),

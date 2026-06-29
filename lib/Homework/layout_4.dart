@@ -216,3 +216,112 @@ class _Layout4State extends State<Layout4> {
     );
   }
 }
+<<<<<<< HEAD
+=======
+Widget cardGrid({
+  required String img,
+  required String name,
+  required String location,
+  required String subtitle,
+  required String subtitle1,
+}) {
+  return Card(
+    color: const Color.fromARGB(255, 239, 237, 231),
+    child: Stack(
+      children: [
+        Container(width: double.infinity, height: double.infinity),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadiusGeometry.only(
+                topLeft: Radius.circular(14),
+                topRight: Radius.circular(14),
+              ),
+              child: Image.asset(
+                img,
+                width: double.infinity,
+                height: 180,
+                fit: BoxFit.cover,
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 4),
+                    child: Text(
+                      name,
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      Icon(Icons.location_on_outlined),
+                      Text(location),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [Text(subtitle), Text(subtitle1)],
+              ),
+            ),
+          ],
+        ),
+        Positioned(
+          top: 145,
+          left: 20,
+          child: ClipRRect(
+            borderRadius: BorderRadiusGeometry.circular(10),
+            child: Container(
+              width: 60,
+              height: 22,
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 246, 215, 101),
+              ),
+              child: Center(
+                child: Text(
+                  "Temple",
+                  style: TextStyle(fontSize: 11, color: Colors.black),
+                ),
+              ),
+            ),
+          ),
+        ),
+        Positioned(
+          top: 20,
+          left: 323,
+          child: ClipRRect(
+            borderRadius: BorderRadiusGeometry.circular(20),
+            child: Container(
+              width: 38,
+              height: 46,
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 255, 255, 255),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 6),
+                child: IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.favorite, color: Colors.red, size: 22),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
+}
+>>>>>>> 844a53f789d510efad31a4cdae83666f80202d7b
