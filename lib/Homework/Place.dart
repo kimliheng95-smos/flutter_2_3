@@ -55,7 +55,7 @@ class Place extends StatelessWidget {
                 children: [
                   cardGrid(
                     img:
-                        "https://apsaraauthority.gov.kh/wp-content/uploads/2021/06/DJI_0070L.jpg",
+                        "assets/Angkorwat.jpg",
                     name: "Angkor Wat",
                     subtitle:
                         "The crowing jewell of the khmer Empire and the largest religious monument The Largest religious monument in the world,",
@@ -64,18 +64,18 @@ class Place extends StatelessWidget {
                   ),
                   cardGrid(
                     img:
-                        "https://asiaforvisitors.com/cambodia/angkor/angkor-wat/angkor-thom/IMG_1798_v1.JPG",
+                        "assets/BAyond.jpg",
                     name: "Bayon Temple",
-                    subtitle: "The Largest religious monument in the world,",
-                    subtitle1: "this UNESCO World Heritage site is a...",
+                    subtitle: "The temple is best known for its many towers adorned with serene, smiling stone faces carved on all sides, which are commonly interpreted.",
+                    subtitle1: "",
                     Text_star: "5.3",
                   ),
                   cardGrid(
                     img:
-                        "https://www.ministryofvillas.com/wp-content/uploads/2023/08/destination-siem-reap.jpg",
+                        "assets/Pubstreeet.jpg",
                     name: "Pub Street Bridge",
-                    subtitle: "The Largest religious monument in the world,",
-                    subtitle1: "this UNESCO World Heritage site is a...",
+                    subtitle: "Pub Street (Street 8) is Siem Reap’s vibrant epicenter for nightlife, dining, and entertainment. Closed to vehicle traffic every budget-friendly mix of bars.",
+                    subtitle1: "",
                     Text_star: "6.0",
                   ),
                 ],
@@ -111,7 +111,7 @@ Widget cardGrid({
                 topLeft: Radius.circular(14),
                 topRight: Radius.circular(14),
               ),
-              child: Image.network(
+              child: Image.asset(
                 img,
                 width: double.infinity,
                 height: 180,
