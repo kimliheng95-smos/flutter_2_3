@@ -8,6 +8,129 @@ class Layout4 extends StatefulWidget {
 }
 
 class _Layout4State extends State<Layout4> {
+  List<bool> favorites = [false, false, false];
+
+  Widget cardGrid({
+    required int index,
+    required bool fav,
+    required String img,
+    required String name,
+    required String location,
+    required String subtitle,
+    required String subtitle1,
+  }) {
+    return Card(
+      child: Stack(
+        children: [
+          Container(
+            width: double.infinity,
+            height: double.infinity,
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 238, 232, 232),
+              borderRadius: BorderRadius.circular(15),
+            ),
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadiusGeometry.only(
+                  topLeft: Radius.circular(14),
+                  topRight: Radius.circular(14),
+                ),
+                child: Image.asset(
+                  img,
+                  width: double.infinity,
+                  height: 180,
+                  fit: BoxFit.cover,
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 4),
+                      child: Text(
+                        name,
+                        style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        Icon(Icons.location_on_outlined),
+                        Text(location),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [Text(subtitle), Text(subtitle1)],
+                ),
+              ),
+            ],
+          ),
+          Positioned(
+            top: 145,
+            left: 20,
+            child: ClipRRect(
+              borderRadius: BorderRadiusGeometry.circular(10),
+              child: Container(
+                width: 60,
+                height: 22,
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 246, 215, 101),
+                ),
+                child: Center(
+                  child: Text(
+                    "Temple",
+                    style: TextStyle(fontSize: 11, color: Colors.black),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            top: 20,
+            left: 323,
+            child: ClipRRect(
+              borderRadius: BorderRadiusGeometry.circular(20),
+              child: Container(
+                width: 38,
+                height: 46,
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 255, 255, 255),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 6),
+                  child: IconButton(
+                    onPressed: () {
+                      setState(() {
+                        favorites[index] = !favorites[index];
+                      });
+                    },
+                    icon: (fav == false)
+                        ? Icon(Icons.favorite, color: Colors.red, size: 22)
+                        : Icon(Icons.favorite_border, size: 22),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,6 +186,8 @@ class _Layout4State extends State<Layout4> {
                     location: "Siem Reap",
                     subtitle: "The Largest religious monument in the world,",
                     subtitle1: "this UNESCO World Heritage site is a...",
+                    index: 0,
+                    fav: favorites[0],
                   ),
                   cardGrid(
                     img: "assets/siem-reap-cambodia-angkor-wat.jpg",
@@ -70,6 +195,8 @@ class _Layout4State extends State<Layout4> {
                     location: "Siem Reap",
                     subtitle: "The Largest religious monument in the world,",
                     subtitle1: "this UNESCO World Heritage site is a...",
+                    index: 1,
+                    fav: favorites[1],
                   ),
                   cardGrid(
                     img: "assets/angkor-wat-resized-1-scaled.webp",
@@ -77,6 +204,8 @@ class _Layout4State extends State<Layout4> {
                     location: "Siem Reap",
                     subtitle: "The Largest religious monument in the world,",
                     subtitle1: "this UNESCO World Heritage site is a...",
+                    index: 1,
+                    fav: favorites[1],
                   ),
                 ],
               ),
@@ -87,7 +216,6 @@ class _Layout4State extends State<Layout4> {
     );
   }
 }
-
 Widget cardGrid({
   required String img,
   required String name,

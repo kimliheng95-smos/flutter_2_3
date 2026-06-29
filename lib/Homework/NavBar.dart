@@ -28,7 +28,7 @@ class _HomePage1State extends State<Navbar> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            _buildItem(Icons.home, "Home", 0),
+            _buildItem(Icons.home_outlined, "Home", 0),
             _buildItem(Icons.map_outlined, "Places", 1),
             _buildItem(Icons.favorite_outline, "Favorites", 2),
             _buildItem(Icons.person_outline, "Profile", 3),
