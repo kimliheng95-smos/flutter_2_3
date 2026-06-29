@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Layout3 extends StatelessWidget {
   const Layout3({super.key});
- 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -95,7 +95,7 @@ class Layout3 extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.only(bottom: 8),
                         child: Icon(
-                          Icons.add_circle,
+                          Icons.create_rounded,
                           color: Colors.white,
                           size: 19,
                         ),
@@ -247,7 +247,7 @@ class Layout3 extends StatelessWidget {
                             color: const Color.fromARGB(255, 255, 225, 115),
                             borderRadius: BorderRadius.circular(13),
                           ),
-                          child: Icon(Icons.note_add_outlined),
+                          child: Icon(Icons.description_outlined),
                         ),
                         title: Text(
                           "Booking Documents",
@@ -275,7 +275,9 @@ class Layout3 extends StatelessWidget {
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
+
                       child: ListTile(
+                        onTap: () {},
                         leading: Container(
                           width: 45,
                           height: 55,

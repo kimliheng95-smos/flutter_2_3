@@ -147,7 +147,7 @@ Widget cardGrid({
                             color: Color.fromARGB(255, 215, 212, 212),
                             borderRadius: BorderRadius.circular(20),
                           ),
-                          child: Text("TEMPLE",style: TextStyle(fontSize: 11),),
+                          child: Text("TEMPLE", style: TextStyle(fontSize: 11)),
                         ),
                       ],
                     ),
