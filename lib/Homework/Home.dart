@@ -290,7 +290,7 @@ class _HomeState extends State<Home> {
                               : Icon(
                                   Icons.favorite,
                                   size: 30,
-                                  color: Colors.white,
+                                  color: const Color.fromARGB(255, 255, 2, 2),
                                 ),
                         ),
                       ),
